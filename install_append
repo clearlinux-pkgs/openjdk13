@@ -3,7 +3,8 @@ mkdir -p %{buildroot}/usr/lib/jvm/java-1.13.0-openjdk
 cp -r build/linux-x86_64-server-release/images/jdk/* %{buildroot}/usr/lib/jvm/java-1.13.0-openjdk
 
 mkdir -p %{buildroot}/usr/lib64
-ln -s /usr/lib/jvm/java-1.13.0-openjdk/lib/jli/libjli13.so %{buildroot}/usr/lib64/libjli13.so
+chmod 755 %{buildroot}/usr/lib/jvm/java-1.13.0-openjdk/lib/libjli13.so
+ln -s /usr/lib/jvm/java-1.13.0-openjdk/lib/libjli13.so %{buildroot}/usr/lib64/libjli13.so
 
 mkdir -p %{buildroot}/usr/bin
 ln -s /usr/lib/jvm/java-1.13.0-openjdk/bin/jaotc %{buildroot}/usr/bin/jaotc13

@@ -4,7 +4,7 @@
 #
 Name     : openjdk13
 Version  : 13
-Release  : 3
+Release  : 4
 URL      : https://hg.openjdk.java.net/jdk/jdk13/archive/jdk-13-ga.tar.bz2
 Source0  : https://hg.openjdk.java.net/jdk/jdk13/archive/jdk-13-ga.tar.bz2
 Summary  : No detailed summary available
@@ -78,7 +78,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1568315530
+export SOURCE_DATE_EPOCH=1568317443
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -107,7 +107,7 @@ make  %{?_smp_mflags} || make images WARNINGS_ARE_ERRORS="-Wno-error" CFLAGS_WAR
 
 
 %install
-export SOURCE_DATE_EPOCH=1568315530
+export SOURCE_DATE_EPOCH=1568317443
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/openjdk13
 cp LICENSE %{buildroot}/usr/share/package-licenses/openjdk13/LICENSE
@@ -123,7 +123,8 @@ rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/lib/jvm/java-1.13.0-openjdk
 cp -r build/linux-x86_64-server-release/images/jdk/* %{buildroot}/usr/lib/jvm/java-1.13.0-openjdk
 mkdir -p %{buildroot}/usr/lib64
-ln -s /usr/lib/jvm/java-1.13.0-openjdk/lib/jli/libjli13.so %{buildroot}/usr/lib64/libjli13.so
+chmod 755 %{buildroot}/usr/lib/jvm/java-1.13.0-openjdk/lib/libjli13.so
+ln -s /usr/lib/jvm/java-1.13.0-openjdk/lib/libjli13.so %{buildroot}/usr/lib64/libjli13.so
 mkdir -p %{buildroot}/usr/bin
 ln -s /usr/lib/jvm/java-1.13.0-openjdk/bin/jaotc %{buildroot}/usr/bin/jaotc13
 ln -s /usr/lib/jvm/java-1.13.0-openjdk/bin/jar %{buildroot}/usr/bin/jar13
