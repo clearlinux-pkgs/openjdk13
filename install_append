@@ -1,0 +1,41 @@
+rm -rf %{buildroot}
+mkdir -p %{buildroot}/usr/lib/jvm/java-1.13.0-openjdk
+cp -r build/linux-x86_64-server-release/images/jdk/* %{buildroot}/usr/lib/jvm/java-1.13.0-openjdk
+
+mkdir -p %{buildroot}/usr/lib64
+ln -s /usr/lib/jvm/java-1.13.0-openjdk/lib/jli/libjli13.so %{buildroot}/usr/lib64/libjli13.so
+
+mkdir -p %{buildroot}/usr/bin
+ln -s /usr/lib/jvm/java-1.13.0-openjdk/bin/jaotc %{buildroot}/usr/bin/jaotc13
+ln -s /usr/lib/jvm/java-1.13.0-openjdk/bin/jar %{buildroot}/usr/bin/jar13
+ln -s /usr/lib/jvm/java-1.13.0-openjdk/bin/jarsigner %{buildroot}/usr/bin/jarsigner13
+ln -s /usr/lib/jvm/java-1.13.0-openjdk/bin/java %{buildroot}/usr/bin/java13
+ln -s /usr/lib/jvm/java-1.13.0-openjdk/bin/javac %{buildroot}/usr/bin/javac13
+ln -s /usr/lib/jvm/java-1.13.0-openjdk/bin/javadoc %{buildroot}/usr/bin/javadoc13
+ln -s /usr/lib/jvm/java-1.13.0-openjdk/bin/javap %{buildroot}/usr/bin/javap13
+ln -s /usr/lib/jvm/java-1.13.0-openjdk/bin/jcmd %{buildroot}/usr/bin/jcmd13
+ln -s /usr/lib/jvm/java-1.13.0-openjdk/bin/jconsole %{buildroot}/usr/bin/jconsole13
+ln -s /usr/lib/jvm/java-1.13.0-openjdk/bin/jdb %{buildroot}/usr/bin/jdb13
+ln -s /usr/lib/jvm/java-1.13.0-openjdk/bin/jdeprscan %{buildroot}/usr/bin/jdeprscan13
+ln -s /usr/lib/jvm/java-1.13.0-openjdk/bin/jfr %{buildroot}/usr/bin/jfr13
+ln -s /usr/lib/jvm/java-1.13.0-openjdk/bin/jdeps %{buildroot}/usr/bin/jdeps13
+ln -s /usr/lib/jvm/java-1.13.0-openjdk/bin/jhsdb %{buildroot}/usr/bin/jhsdb13
+ln -s /usr/lib/jvm/java-1.13.0-openjdk/bin/jimage %{buildroot}/usr/bin/jimage13
+ln -s /usr/lib/jvm/java-1.13.0-openjdk/bin/jinfo %{buildroot}/usr/bin/jinfo13
+ln -s /usr/lib/jvm/java-1.13.0-openjdk/bin/jjs %{buildroot}/usr/bin/jjs13
+ln -s /usr/lib/jvm/java-1.13.0-openjdk/bin/jlink %{buildroot}/usr/bin/jlink13
+ln -s /usr/lib/jvm/java-1.13.0-openjdk/bin/jmap %{buildroot}/usr/bin/jmap13
+ln -s /usr/lib/jvm/java-1.13.0-openjdk/bin/jmod %{buildroot}/usr/bin/jmod13
+ln -s /usr/lib/jvm/java-1.13.0-openjdk/bin/jps %{buildroot}/usr/bin/jps13
+ln -s /usr/lib/jvm/java-1.13.0-openjdk/bin/jrunscript %{buildroot}/usr/bin/jrunscript13
+ln -s /usr/lib/jvm/java-1.13.0-openjdk/bin/jshell %{buildroot}/usr/bin/jshell13
+ln -s /usr/lib/jvm/java-1.13.0-openjdk/bin/jstack %{buildroot}/usr/bin/jstack13
+ln -s /usr/lib/jvm/java-1.13.0-openjdk/bin/jstat %{buildroot}/usr/bin/jstat13
+ln -s /usr/lib/jvm/java-1.13.0-openjdk/bin/jstatd %{buildroot}/usr/bin/jstatd13
+ln -s /usr/lib/jvm/java-1.13.0-openjdk/bin/keytool  %{buildroot}/usr/bin/keytool13
+ln -s /usr/lib/jvm/java-1.13.0-openjdk/bin/pack200  %{buildroot}/usr/bin/pack20013
+ln -s /usr/lib/jvm/java-1.13.0-openjdk/bin/rmic  %{buildroot}/usr/bin/rmic13
+ln -s /usr/lib/jvm/java-1.13.0-openjdk/bin/rmid  %{buildroot}/usr/bin/rmid13
+ln -s /usr/lib/jvm/java-1.13.0-openjdk/bin/rmiregistry %{buildroot}/usr/bin/rmiregistry13
+ln -s /usr/lib/jvm/java-1.13.0-openjdk/bin/serialver %{buildroot}/usr/bin/serialver13
+ln -s /usr/lib/jvm/java-1.13.0-openjdk/bin/unpack200 %{buildroot}/usr/bin/unpack20013

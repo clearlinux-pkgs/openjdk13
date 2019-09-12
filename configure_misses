@@ -1,0 +1,39 @@
+Configure miss: gdiff
+Configure miss: gmkdir
+Configure miss: nawk
+Configure miss: greadlink
+Configure miss: cygpath
+Configure miss: wslpath
+Configure miss: lsb_release
+Configure miss: cmd.exe
+Configure miss: /mnt/c/Windows/System32/cmd.exe
+Configure miss: if custom source is suppressed (openjdk-only)
+Configure miss: zypper
+Configure miss: apt-get
+Configure miss: yum
+Configure miss: brew
+Configure miss: port
+Configure miss: pkgutil
+Configure miss: pkgadd
+Configure miss: output-sync value
+Configure miss: greadelf
+Configure miss: hg
+Configure miss: time
+Configure miss: dtrace
+Configure miss: gpatch
+Configure miss: headless only
+Configure miss: gobjcopy
+Configure miss: gobjdump
+Configure miss: jtreg
+Configure miss: jtreg test harness
+Configure miss: jmh (Java Microbenchmark Harness)
+Configure miss: jib
+Configure miss: if native warnings are errors
+Configure miss: dtrace tool
+Configure miss: sys/sdt.h usability
+Configure miss: sys/sdt.h presence
+Configure miss: sys/sdt.h
+Configure miss: if dtrace should be built
+Configure miss: if jtreg failure handler should be built
+Configure miss: if any translations should be excluded
+Configure miss: whether to use sjavac
