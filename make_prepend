@@ -3,7 +3,7 @@ export CXX=/usr/bin/g++
 cp -r src/java.base/share/native/libjli src/java.base/share/native/libjli13
 cp -r src/java.base/unix/native/libjli src/java.base/unix/native/libjli13
 bash configure \
---with-boot-jdk=/usr/lib/jvm/java-1.12.0-openjdk \
+--with-boot-jdk=/usr/lib/jvm/java-1.13.0-openjdk \
 --x-includes=/usr/include/ \
 --x-libraries=/usr/lib64 \
 --with-zlib=system \

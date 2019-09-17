@@ -4,7 +4,7 @@
 #
 Name     : openjdk13
 Version  : 13
-Release  : 4
+Release  : 5
 URL      : https://hg.openjdk.java.net/jdk/jdk13/archive/jdk-13-ga.tar.bz2
 Source0  : https://hg.openjdk.java.net/jdk/jdk13/archive/jdk-13-ga.tar.bz2
 Summary  : No detailed summary available
@@ -29,8 +29,8 @@ BuildRequires : libXi-dev
 BuildRequires : libXrender-dev
 BuildRequires : libXt-dev
 BuildRequires : libXtst-dev
-BuildRequires : openjdk12
-BuildRequires : openjdk12-dev
+BuildRequires : openjdk13
+BuildRequires : openjdk13-dev
 BuildRequires : pandoc
 BuildRequires : zip
 Patch1: Rename-jli-as-jli13.patch
@@ -78,7 +78,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1568317443
+export SOURCE_DATE_EPOCH=1568757102
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -93,7 +93,7 @@ export CXX=/usr/bin/g++
 cp -r src/java.base/share/native/libjli src/java.base/share/native/libjli13
 cp -r src/java.base/unix/native/libjli src/java.base/unix/native/libjli13
 bash configure \
---with-boot-jdk=/usr/lib/jvm/java-1.12.0-openjdk \
+--with-boot-jdk=/usr/lib/jvm/java-1.13.0-openjdk \
 --x-includes=/usr/include/ \
 --x-libraries=/usr/lib64 \
 --with-zlib=system \
@@ -107,7 +107,7 @@ make  %{?_smp_mflags} || make images WARNINGS_ARE_ERRORS="-Wno-error" CFLAGS_WAR
 
 
 %install
-export SOURCE_DATE_EPOCH=1568317443
+export SOURCE_DATE_EPOCH=1568757102
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/openjdk13
 cp LICENSE %{buildroot}/usr/share/package-licenses/openjdk13/LICENSE
