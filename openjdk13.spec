@@ -4,7 +4,7 @@
 #
 Name     : openjdk13
 Version  : 13
-Release  : 5
+Release  : 6
 URL      : https://hg.openjdk.java.net/jdk/jdk13/archive/jdk-13-ga.tar.bz2
 Source0  : https://hg.openjdk.java.net/jdk/jdk13/archive/jdk-13-ga.tar.bz2
 Summary  : No detailed summary available
@@ -78,7 +78,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1568757102
+export SOURCE_DATE_EPOCH=1569447310
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -103,11 +103,11 @@ bash configure \
 --disable-warnings-as-errors \
 --prefix=%{buildroot}/usr/lib
 ## make_prepend end
-make  %{?_smp_mflags} || make images WARNINGS_ARE_ERRORS="-Wno-error" CFLAGS_WARNINGS_ARE_ERRORS="-Wno-error"
+make  %{?_smp_mflags}  || make images WARNINGS_ARE_ERRORS="-Wno-error" CFLAGS_WARNINGS_ARE_ERRORS="-Wno-error"
 
 
 %install
-export SOURCE_DATE_EPOCH=1568757102
+export SOURCE_DATE_EPOCH=1569447310
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/openjdk13
 cp LICENSE %{buildroot}/usr/share/package-licenses/openjdk13/LICENSE
@@ -782,7 +782,6 @@ ln -s /usr/lib/jvm/java-1.13.0-openjdk/bin/unpack200 %{buildroot}/usr/bin/unpack
 /usr/lib/jvm/java-1.13.0-openjdk/include/jvmticmlr.h
 /usr/lib/jvm/java-1.13.0-openjdk/include/linux/jawt_md.h
 /usr/lib/jvm/java-1.13.0-openjdk/include/linux/jni_md.h
-/usr/lib64/libjli13.so
 
 %files lib
 %defattr(-,root,root,-)
@@ -824,3 +823,4 @@ ln -s /usr/lib/jvm/java-1.13.0-openjdk/bin/unpack200 %{buildroot}/usr/bin/unpack
 /usr/lib/jvm/java-1.13.0-openjdk/lib/libzip.so
 /usr/lib/jvm/java-1.13.0-openjdk/lib/server/libjsig.so
 /usr/lib/jvm/java-1.13.0-openjdk/lib/server/libjvm.so
+/usr/lib64/libjli13.so
