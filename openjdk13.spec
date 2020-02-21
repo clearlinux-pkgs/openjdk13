@@ -4,7 +4,7 @@
 #
 Name     : openjdk13
 Version  : 13.0.2
-Release  : 8
+Release  : 9
 URL      : https://hg.openjdk.java.net/jdk-updates/jdk13u/archive/jdk-13.0.2-ga.tar.bz2
 Source0  : https://hg.openjdk.java.net/jdk-updates/jdk13u/archive/jdk-13.0.2-ga.tar.bz2
 Summary  : No detailed summary available
@@ -14,8 +14,6 @@ Requires: openjdk13-bin = %{version}-%{release}
 Requires: openjdk13-lib = %{version}-%{release}
 BuildRequires : alsa-lib-dev
 BuildRequires : apache-ant
-BuildRequires : apache-maven
-BuildRequires : buildreq-mvn
 BuildRequires : ca-certs
 BuildRequires : ccache
 BuildRequires : cups-dev
@@ -81,7 +79,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1580843560
+export SOURCE_DATE_EPOCH=1582321958
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -110,7 +108,7 @@ make  %{?_smp_mflags}  || make images WARNINGS_ARE_ERRORS="-Wno-error" CFLAGS_WA
 
 
 %install
-export SOURCE_DATE_EPOCH=1580843560
+export SOURCE_DATE_EPOCH=1582321958
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/openjdk13
 cp %{_builddir}/jdk13u-jdk-13.0.2-ga/LICENSE %{buildroot}/usr/share/package-licenses/openjdk13/a4fb972c240d89131ee9e16b845cd302e0ecb05f
