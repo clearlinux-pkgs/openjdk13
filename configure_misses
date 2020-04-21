@@ -8,6 +8,7 @@ Configure miss: lsb_release
 Configure miss: cmd.exe
 Configure miss: /mnt/c/Windows/System32/cmd.exe
 Configure miss: if custom source is suppressed (openjdk-only)
+Configure miss: if absolute paths should be allowed in the build output
 Configure miss: zypper
 Configure miss: apt-get
 Configure miss: yum
