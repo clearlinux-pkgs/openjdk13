@@ -4,7 +4,7 @@
 #
 Name     : openjdk13
 Version  : 13.0.5
-Release  : 12
+Release  : 13
 URL      : https://hg.openjdk.java.net/jdk-updates/jdk13u/archive/jdk-13.0.5-ga.tar.bz2
 Source0  : https://hg.openjdk.java.net/jdk-updates/jdk13u/archive/jdk-13.0.5-ga.tar.bz2
 Summary  : No detailed summary available
@@ -79,15 +79,15 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1632848213
+export SOURCE_DATE_EPOCH=1633391299
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
-export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=auto -march=x86-64-v3 "
-export FCFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=auto -march=x86-64-v3 "
-export FFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=auto -march=x86-64-v3 "
-export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=auto -march=x86-64-v3 "
+export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=auto "
+export FCFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=auto "
+export FFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=auto "
+export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=auto "
 ## make_prepend content
 export CC=/usr/bin/gcc
 export CXX=/usr/bin/g++
@@ -108,7 +108,7 @@ make  %{?_smp_mflags}  || make images WARNINGS_ARE_ERRORS="-Wno-error" CFLAGS_WA
 
 
 %install
-export SOURCE_DATE_EPOCH=1632848213
+export SOURCE_DATE_EPOCH=1633391299
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/openjdk13
 cp %{_builddir}/jdk13u-jdk-13.0.5-ga/LICENSE %{buildroot}/usr/share/package-licenses/openjdk13/a4fb972c240d89131ee9e16b845cd302e0ecb05f
